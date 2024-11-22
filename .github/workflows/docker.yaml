@@ -10,4 +10,6 @@ jobs:
         - name: Build the Docker image
           run: docker build -f .dockerfile -t ttt:latest .
         - name: Push the Docker image
-          run: docker run ttt
+          run: |
+            uname -a
+            docker run ttt
