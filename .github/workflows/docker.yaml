@@ -12,4 +12,5 @@ jobs:
         - name: Push the Docker image
           run: |
             uname -a
+            lsmod
             docker run ttt
