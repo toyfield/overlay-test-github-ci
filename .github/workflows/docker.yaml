@@ -1,0 +1,13 @@
+on:
+    workflow_dispatch:
+    push:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - name: Build the Docker image
+          run: docker build -f .dockerfile -t ttt:latest .
+        - name: Push the Docker image
+          run: docker run ttt
